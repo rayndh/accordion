@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: "微软雅黑";
+        }
+        a{
+            text-decoration: none;
+        }
+        #content{
+            margin: 30px auto;
+
+            width: 1068px;
+            height: 432px;
+            /*background-color: red;*/
+            position: relative;
+        }
+
+        #content ul li{
+            width: 100px;
+            height: 432px;
+            float: left;
+            text-align: center;
+        }
+        #content ul .li1{
+            background: url("img/1.jpeg") no-repeat;
+            background-size: cover;
+            width: 768px;
+
+        }
+        #content ul .li2{
+            background: url("img/3.jpeg") no-repeat;
+            background-size: cover;
+        }
+        #content ul .li3{
+            background: url("img/2.jpeg") no-repeat;
+            background-size: cover;
+        }
+        #content ul .li4{
+            background: url("img/4.jpeg") no-repeat;
+            background-size: cover;
+            /*width: 768px;*/
+        }
+
+        .text{
+            display: block;
+            width: 100px;
+            height: 432px;
+            background-color: rgba(0,0,0,0.5);
+            /*background-color: rgba(255,255,255,0.4);*/
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .text p{
+            float: left;
+        }
+        .text .p1{
+            padding: 25px 15px 0px 20px;
+            font-size: 13px;
+            width: 13px;
+
+
+        }
+        .text .p2{
+            margin-top: 24px;
+            font-size: 15px;
+            width: 15px;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+       <div id="content">
+           <ul>
+           <li class="li1">
+               <a href="javascript:;"><div class="text">
+                   <p class="p1">蓝色咖啡豆</p>
+                   <p class="p2">不一样的城市不一样的体验</p>
+               </div></a>
+           </li>
+           <li class="li2">
+               <a href="javascript:;"><div class="text">
+                   <p class="p1">蓝色咖啡豆</p>
+                   <p class="p2">不一样的城市不一样的体验</p>
+               </div></a>
+           </li>
+           <li class="li3">
+               <a href="javascript:;"><div class="text">
+                   <p class="p1">蓝色咖啡豆</p>
+                   <p class="p2">不一样的城市不一样的体验</p>
+               </div></a>
+           </li>
+           <li class="li4">
+               <a href="javascript:;"><div class="text">
+                   <p class="p1">蓝色咖啡豆</p>
+                   <p class="p2">不一样的城市不一样的体验</p>
+               </div></a>
+           </li>
+           </ul>
+       </div>
+       <script src="jquery-3.2.0.js"></script>
+       <script>
+
+            $(function () {
+                $("#content ul li").mouseover(function () {
+                    $(this).stop(true).animate({width:"768px"},1500).siblings().stop(true).animate({width:"100px"},1500);
+                });
+            });
+
+
+       </script>
+
+
+
+</body>
+</html>
